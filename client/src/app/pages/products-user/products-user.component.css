@@ -1,0 +1,32 @@
+
+aside {
+  display: flex;
+  flex-direction: column;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.productContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  flex-grow: 3;
+}
+
+.cartPrice{
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.cartPrice > *{
+  margin-top: auto;
+} 
+
+.link{
+  color: rgb(16, 101, 212);
+}
