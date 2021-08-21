@@ -16,7 +16,6 @@ app.use(cors())
 app.use(fileUpload())
 
 app.use(loginFilter())
-app.get("/file",(req,res,next)=>res.sendFile(path.join(__dirname,"./products.html")))
 app.use("/images",express.static("./images"))
 app.use("/market",marketController)
 app.use("/users",userController)
