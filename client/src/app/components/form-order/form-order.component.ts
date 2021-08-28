@@ -63,12 +63,13 @@ export class FormOrderComponent implements OnInit {
     const observable = this.orderService.makeOrder(order)
 
     observable.subscribe((HttpResponseData)=>{
-      // this.router.navigate(["/login"])      
+      this.error=""
+      this.router.navigate(["order/user/successful"])
     },(HttpErrorData)=>{
       this.error =HttpErrorData.error.error
     })
 
-    this.router.navigate(["order/user/successful"])
+
   }
 
 

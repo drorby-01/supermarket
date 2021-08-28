@@ -34,15 +34,15 @@ class ValidateOrder {
         throw new ServerError(ErrorType.SHIPPING_DATE_OVER)
     }
 
-    this.validateMakeThreeOrder(order.shippingDate);
+    await this.validateMakeThreeOrder(order.shippingDate);
   }
 
   static async validateMakeThreeOrder(shippingDate) {
     const result = await orderDao.threeOrderMade(shippingDate);
-    const {countOrder} = result;
-    console.log(countOrder)
-    if(countOrder === 3){
-        throw new ServerError(ErrorType.NOT_GIVING_SHIPPING_DATE)
+    const {countShip} = result;
+    console.log("counter is: "+countShip)
+    if(+countShip >= 3){
+        throw new ServerError(ErrorType.SORREY_WE_HAVE_THREE_ORDER)
     }
   }
 }

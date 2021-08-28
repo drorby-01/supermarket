@@ -5,7 +5,7 @@ const { exceuteWithParameters, execute } = require("./connaction-wraper");
 
 const threeOrderMade = async (shipDate) => {
   try {
-    const sql = `select count(order_made) as countOrder  from invitation where date_format(order_made,"%Y-%m-%d") = ?`;
+    const sql = `select count(ship_date) as countShip  from invitation where date_format(ship_date,"%Y-%m-%d") = ?`;
     const parameters = [shipDate];
     const [result] = await exceuteWithParameters(sql, parameters);
     return result;
