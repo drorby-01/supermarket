@@ -11,12 +11,12 @@ const cartController = require("./controllers/cart-controller")
 const orderController = require("./controllers/order-controller")
 const fileUpload = require("express-fileupload");
 
+
 app.use(express.json())
 app.use(cors())
 app.use(fileUpload())
-
-app.use(loginFilter())
 app.use("/images",express.static("./images"))
+app.use(loginFilter())
 app.use("/market",marketController)
 app.use("/users",userController)
 app.use("/products",productControllerr)

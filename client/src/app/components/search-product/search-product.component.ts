@@ -20,10 +20,13 @@ export class SearchProductComponent implements OnInit {
   }
 
   searchProductOnServer() {
-    if (this.searchProduct !== "") {
+    
       this.searchProducts.emit(this.searchProduct);
-      this.colorOrder.emit(this.searchProduct)
-    }
+      
+        this.colorOrder.emit(this.searchProduct);
+      
+      
+    
 
   }
 }

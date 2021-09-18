@@ -1,5 +1,6 @@
 const expressJwt = require("express-jwt");
 const config = require("../config.json");
+
 const { secret } = config;
 console.log(secret);
 function authLogin() {
@@ -11,7 +12,7 @@ function authLogin() {
       { url: "/users/", method: "POST" },
       { url: "/users/login", method: "POST" },
       { url: "/users/register/firstStep", method: "POST" },
-      {url:"/market",method:"GET"},
+      { url: "/market", method: "GET" },
     ],
   });
 }

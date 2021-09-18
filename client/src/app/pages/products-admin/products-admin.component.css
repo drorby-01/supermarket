@@ -17,6 +17,9 @@ main {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  width: auto;
+  height: 70vh;
+  overflow-y:scroll;
 }
 
 .addProduct{

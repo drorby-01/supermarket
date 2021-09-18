@@ -9,7 +9,6 @@ import { RoutingModule } from './routing.module';
 import { LoginComponent } from '../pages/login/login.component';
 import { RegisterComponent } from '../pages/register/register.component';
 import { RegisterTwoComponent } from '../pages/register-two/register-two.component';
-
 import { AlertComponent } from '../components/alert/alert.component';
 import { ProductsUserComponent } from '../pages/products-user/products-user.component';
 import { ProductsAdminComponent } from '../pages/products-admin/products-admin.component';
